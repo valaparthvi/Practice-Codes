@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+	<title>Tweets Download</title>
+</head>
+<body>
+	<form action="{% url 'index' %}"  method="POST" class="forms">
+		{% csrf_token %}
+		{{form}}
+		<input id='db' type="submit" value="Download">
+		{% block content %}
+		{% endblock %}
+	</form>
+</body>
+</html>
