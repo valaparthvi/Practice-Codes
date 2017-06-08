@@ -1,3 +1,12 @@
+"""
+/usr/bin/python3.5
+Packages used: django_otp, twilio
+To install django_otp: pip install django_otp
+To install twilio: pip install twillio
+Obtain a twilio account_sid, auth_token and phone number.
+"""
+
+
 from django_otp.oath import TOTP
 from binascii import hexlify
 from os import urandom
